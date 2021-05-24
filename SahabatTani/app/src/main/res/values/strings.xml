@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Sahabat Tani</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login_to_continue">Login to continue</string>
+    <string name="login">Login</string>
+    <string name="welcome_username">Welcome username</string>
+    <string name="email">Email</string>
+    <string name="buat_akun">Buat Akun</string>
+    <string name="nama">Nama</string>
+    <string name="daftar">Daftar</string>
+    <string name="ulangi_password">Ulangi Password</string>
+    <string-array name="roleArray">
+        <item>Petani</item>
+        <item>Tengkulak</item>
+    </string-array>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+</resources>
