@@ -1,4 +1,4 @@
-package com.cap0394.sahabattani.Modul;
+package com.cap0394.sahabattani.modul;
 
 public class RegisterResponse {
     private String status;

@@ -1,4 +1,4 @@
-package com.cap0394.sahabattani.API;
+package com.cap0394.sahabattani.api;
 
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;

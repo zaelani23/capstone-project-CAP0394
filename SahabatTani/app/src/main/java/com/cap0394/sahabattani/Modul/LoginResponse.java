@@ -1,15 +1,15 @@
-package com.cap0394.sahabattani.Modul;
+package com.cap0394.sahabattani.modul;
 
 public class LoginResponse {
 
-    private String user_id, role;
+    private String userId, role;
 
-    public String getUser_id() {
-        return user_id;
+    public String getUserId() {
+        return userId;
     }
 
-    public void setUser_id(String user_id) {
-        this.user_id = user_id;
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
     public String getRole() {

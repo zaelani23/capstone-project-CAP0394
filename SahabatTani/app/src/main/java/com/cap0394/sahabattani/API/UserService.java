@@ -1,9 +1,9 @@
-package com.cap0394.sahabattani.API;
+package com.cap0394.sahabattani.api;
 
-import com.cap0394.sahabattani.Modul.LoginRequest;
-import com.cap0394.sahabattani.Modul.LoginResponse;
-import com.cap0394.sahabattani.Modul.RegisterRequest;
-import com.cap0394.sahabattani.Modul.RegisterResponse;
+import com.cap0394.sahabattani.modul.LoginRequest;
+import com.cap0394.sahabattani.modul.LoginResponse;
+import com.cap0394.sahabattani.modul.RegisterRequest;
+import com.cap0394.sahabattani.modul.RegisterResponse;
 
 import retrofit2.Call;
 import retrofit2.http.Body;

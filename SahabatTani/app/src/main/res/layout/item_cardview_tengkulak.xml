@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view_tengkulak"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginBottom="4dp"
+    card_view:cardCornerRadius="4dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/image_tengkulak"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            card_view:srcCompat="@mipmap/sample_img_tengkulak_foreground" />
+
+        <TextView
+            android:id="@+id/name_tengkulak"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="4dp"
+            android:layout_toEndOf="@id/image_tengkulak"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Nama"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/last_update"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/name_tengkulak"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="4dp"
+            android:layout_toEndOf="@id/image_tengkulak"
+            android:text="Last updated : 27/05/2021"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="12sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/commodity_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/last_update"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="4dp"
+            android:layout_toEndOf="@id/image_tengkulak"
+            android:fontFamily="serif"
+            android:text="Komoditas : Gabah"
+            android:textColor="@android:color/holo_green_dark"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/bidding_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/commodity_name"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="4dp"
+            android:layout_toEndOf="@id/image_tengkulak"
+            android:fontFamily="serif"
+            android:text="Penawaran : Rp. 4500/kg"
+            android:textColor="@android:color/holo_green_dark"
+            android:textSize="14sp" />
+
+        <ImageButton
+            android:id="@+id/btn_chat_tengkulak"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/alamat"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_toEndOf="@id/image_tengkulak"
+            android:background="@drawable/round_bg"
+            card_view:srcCompat="@drawable/ic_chat_24" />
+
+        <TextView
+            android:id="@+id/alamat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bidding_price"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="4dp"
+            android:layout_toEndOf="@id/image_tengkulak"
+            android:ellipsize="end"
+            android:fontFamily="serif"
+            android:maxLines="2"
+            android:text="Alamat : Desa, Kecamatan"
+            android:textColor="@android:color/holo_green_dark"
+            android:textSize="14sp" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

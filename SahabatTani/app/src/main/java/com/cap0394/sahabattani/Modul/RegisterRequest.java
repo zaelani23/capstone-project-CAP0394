@@ -1,8 +1,7 @@
-package com.cap0394.sahabattani.Modul;
+package com.cap0394.sahabattani.modul;
 
 public class RegisterRequest {
-
-    private String nama, email, password, confirm_password, role;
+    private String nama, email, password, confirmPassword, role;
 
     public String getNama() {
         return nama;
@@ -28,12 +27,12 @@ public class RegisterRequest {
         this.password = password;
     }
 
-    public String getConfirm_password() {
-        return confirm_password;
+    public String getConfirmPassword() {
+        return confirmPassword;
     }
 
-    public void setConfirm_password(String confirm_password) {
-        this.confirm_password = confirm_password;
+    public void setConfirmPassword(String confirmPassword) {
+        this.confirmPassword = confirmPassword;
     }
 
     public String getRole() {
