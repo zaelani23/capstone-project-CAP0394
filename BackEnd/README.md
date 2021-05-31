@@ -31,6 +31,7 @@ pip install -r requirements.txt
 4. Setup environment variables in `.env` file.
 
 ```
+MYSQL_HOST = "<HOST>"
 MYSQL_USER="<username>"
 MYSQL_PASSWORD="<password>"
 MYSQL_DB="<database>"

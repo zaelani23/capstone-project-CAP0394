@@ -1,4 +1,4 @@
-from flask import Blueprint, request, Response, jsonify
+from flask import Blueprint, request, Response, jsonify, session
 from utils import (
     validate_user_input,
     generate_salt,
@@ -15,7 +15,7 @@ def register_user():
     user_nama = request.json["nama"]
     user_email = request.json["email"]
     user_password = request.json["password"]
-    user_confirm_password = request.json["confirm_password"]
+    user_confirm_password = request.json["confirmPassword"]
     user_role = request.json["role"]
 
     if user_password == user_confirm_password and validate_user_input(
@@ -51,9 +51,13 @@ def login_user():
     user = validate_user(user_email, user_password)
 
     if user:
-        return jsonify({
-            "user_id": user['user_id'],
-            "role": user['role'] 
-            })
+        session['user_id'] = user["user_id"]
+        return jsonify(user)
     else:
         Response(status=401)
+
+
+@authentication.route("/logout")
+def logout_user():
+    session.pop('user_id', None)
+    return Response(status=200)

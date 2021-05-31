@@ -40,6 +40,18 @@ def db_write(query, params):
         cursor.close()
         return {"status": False, "insert_id": 0}
 
+def db_update(query, params):
+    cursor = db.connection.cursor()
+    try:
+        cursor.execute(query, params)
+        db.connection.commit()
+        cursor.close()
+
+        return True
+
+    except MySQLdb._exceptions.IntegrityError:
+        cursor.close()
+        return False
 
 def generate_salt():
     salt = os.urandom(16)
@@ -75,7 +87,7 @@ def validate_user_input(input_type, **kwargs):
 
 
 def validate_user(email, password):
-    current_user = db_read("""SELECT * FROM users WHERE email = %s""", (email,))
+    current_user = db_read("""SELECT users.*, profil.nama FROM users, profil WHERE users.id = profil.id AND users.email = %s""", (email,))
 
     if len(current_user) == 1:
         saved_password_hash = current_user[0]["password_hash"]
@@ -85,8 +97,14 @@ def validate_user(email, password):
         if password_hash == saved_password_hash:
             user_id = current_user[0]["id"]
             user_role = current_user[0]["role"]
+            user_email = current_user[0]["email"]
+            user_nama = current_user[0]["nama"]
             # jwt_token = generate_jwt_token({"id": user_id})
-            return {"user_id": user_id, "role": user_role}
+            return {"user_id": user_id,
+                    "email": user_email,
+                    "nama": user_nama,
+                    "role": user_role
+                }
         else:
             return False
 
