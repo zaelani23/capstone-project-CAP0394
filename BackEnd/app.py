@@ -1,7 +1,7 @@
 from flask import Flask
 from flask_cors import CORS
 from flask_mysqldb import MySQL
-from settings import MYSQL_USER, MYSQL_PASSWORD, MYSQL_DB
+from settings import MYSQL_USER, MYSQL_PASSWORD, MYSQL_DB, MYSQL_HOST
 
 
 app = Flask(__name__)
