@@ -34,11 +34,14 @@ def edit_profil():
 	user_kabupaten = request.json["kabupaten"]
 	user_provinsi = request.json["provinsi"]
 
-	update = db_update("""UPDATE profil SET email = %s, nama = %s, desa = %s, kecamatan = %s, kabupaten = %s, provinsi = %s WHERE profil.id = %s""",
+	update1 = db_update("""UPDATE profil SET email = %s, nama = %s, desa = %s, kecamatan = %s, kabupaten = %s, provinsi = %s WHERE profil.id = %s""",
                 (user_email, user_nama, user_desa, user_kecamatan, user_kabupaten, user_provinsi, user_id),
             )
+	update2 = db_update("""UPDATE users SET email = %s WHERE users.id = %s""",
+				(user_email, user_id),
+			)
 
-	if update:
+	if update1 and update2:
 		return Response(status=200)
 	else:
 		return Response(status=400)
