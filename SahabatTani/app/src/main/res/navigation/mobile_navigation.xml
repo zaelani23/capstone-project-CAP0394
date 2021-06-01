@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.cap0394.sahabattani.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_nav_find_tengkulak"
+            app:destination="@id/nav_find_tengkulak" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_price"
+            app:destination="@id/nav_price" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_forecast"
+            app:destination="@id/nav_forecast" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_marketplace"
+            app:destination="@id/nav_marketplace" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_info"
+            app:destination="@id/nav_info" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_find_tengkulak"
+        android:name="com.cap0394.sahabattani.ui.findtengkulak.FindTengkulakFragment"
+        android:label="@string/menu_find_tengkulak"
+        tools:layout="@layout/fragment_find_tengkulak" >
+        <action
+            android:id="@+id/action_nav_find_tengkulak_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_forecast"
+        android:name="com.cap0394.sahabattani.ui.forecast.ForecastFragment"
+        android:label="@string/menu_prediksi_harga"
+        tools:layout="@layout/fragment_forecast" >
+        <action
+            android:id="@+id/action_nav_forecast_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_price"
+        android:name="com.cap0394.sahabattani.ui.price.PriceFragment"
+        android:label="@string/menu_price"
+        tools:layout="@layout/fragment_price" >
+        <action
+            android:id="@+id/action_nav_price_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_marketplace"
+        android:name="com.cap0394.sahabattani.ui.marketplace.MarketplaceFragment"
+        android:label="@string/menu_marketplace"
+        tools:layout="@layout/fragment_marketplace" >
+        <action
+            android:id="@+id/action_nav_marketplace_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_info"
+        android:name="com.cap0394.sahabattani.ui.infopertanian.InfoPertanianFragment"
+        android:label="@string/menu_info_pertanian"
+        tools:layout="@layout/fragment_info_pertanian" >
+        <action
+            android:id="@+id/action_nav_info_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
+</navigation>

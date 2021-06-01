@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_menu_home"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_find_tengkulak"
+            android:icon="@drawable/ic_search_24"
+            android:title="@string/menu_find_tengkulak" />
+        <item
+            android:id="@+id/nav_price"
+            android:icon="@drawable/ic_price_24"
+            android:title="@string/menu_price" />
+        <item
+            android:id="@+id/nav_forecast"
+            android:icon="@drawable/ic_menu_forecast"
+            android:title="@string/menu_prediksi_harga" />
+        <item
+            android:id="@+id/nav_marketplace"
+            android:icon="@drawable/ic_menu_marketplace"
+            android:title="@string/menu_marketplace" />
+        <item
+            android:id="@+id/nav_info"
+            android:icon="@drawable/ic_menu_info_pertanian"
+            android:title="@string/menu_info_pertanian" />
+    </group>
+</menu>

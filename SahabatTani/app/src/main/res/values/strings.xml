@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Sahabat Tani</string>
+    <string name="sudah_punya_akun">Sudah Punya Akun?</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="pengguna_baru_daftar_sekarang">Pengguna Baru? Daftar Sekarang</string>
+    <string name="email">Email</string>
+    <string-array name="roleArray">
+        <item>Petani</item>
+        <item>Tengkulak</item>
+    </string-array>
+    <string name="title_activity_dashboard">DashboardActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_name">Loading...</string>
+    <string name="nav_header_email">Loading...</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_logout">Logout</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_find_tengkulak">Cari Tengkulak</string>
+    <string name="menu_price">Cek Harga</string>
+    <string name="menu_prediksi_harga">Prediksi Harga</string>
+    <string name="menu_marketplace">Marketplace</string>
+    <string name="menu_info_pertanian">Info Pertanian</string>
+    <string name="menu_search_tengkulak">Search Tengkulak</string>
+    <string name="atur_lokasi">Atur Lokasi</string>
+    <string name="atur_tanggal">Atur Tanggal</string>
+    <string name="cari">Cari</string>
+</resources>
