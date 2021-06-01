@@ -26,12 +26,12 @@ def get_profile():
 @dashboard.route("/edit-profil", methods=["POST"])
 def edit_profil():
 	user_id = request.json["user_id"]
-	user_nama = request.json["nama"].title()
-	user_email = request.json["email"]
-	user_desa = request.json["desa"].title()
-	user_kecamatan = request.json["kecamatan"].title()
-	user_kabupaten = request.json["kabupaten"].title()
-	user_provinsi = request.json["provinsi"].title()
+	user_nama = request.json["nama"].title().strip()
+	user_email = request.json["email"].strip()
+	user_desa = request.json["desa"].title().strip()
+	user_kecamatan = request.json["kecamatan"].title().strip()
+	user_kabupaten = request.json["kabupaten"].title().strip()
+	user_provinsi = request.json["provinsi"].title().strip()
 
 	update1 = db_update("""UPDATE profil SET email = %s, nama = %s, desa = %s, kecamatan = %s, kabupaten = %s, provinsi = %s WHERE profil.id = %s""",
                 (user_email, user_nama, user_desa, user_kecamatan, user_kabupaten, user_provinsi, user_id),
@@ -41,6 +41,6 @@ def edit_profil():
 			)
 
 	if update1 and update2:
-		return Response(status=200)
+		return Response({"status": "success"})
 	else:
 		return Response(status=400)

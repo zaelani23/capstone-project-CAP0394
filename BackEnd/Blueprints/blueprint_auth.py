@@ -12,8 +12,8 @@ authentication = Blueprint("authentication", __name__)
 
 @authentication.route("/register", methods=["POST"])
 def register_user():
-    user_nama = request.json["nama"]
-    user_email = request.json["email"]
+    user_nama = request.json["nama"].strip().title()
+    user_email = request.json["email"].strip()
     user_password = request.json["password"]
     user_confirm_password = request.json["confirmPassword"]
     user_role = request.json["role"]
@@ -32,7 +32,7 @@ def register_user():
             insert_id = query1["insert_id"]
             query2 = db_write(
                 """INSERT INTO profil (id, email, nama, desa, kecamatan, kabupaten, provinsi) VALUES (%s, %s, %s, '', '', '', '')""",
-                (insert_id, user_email, user_nama.title()),
+                (insert_id, user_email, user_nama),
             )
 
         if query1["status"] and ["status"]:
