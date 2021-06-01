@@ -41,6 +41,6 @@ def edit_profil():
 			)
 
 	if update1 and update2:
-		return Response({"status": "success"})
+		return jsonify({"status": "success"})
 	else:
 		return Response(status=400)
