@@ -3,7 +3,6 @@
 ## Built With
 
 - Flask
-- JWT
 - MySQL
 
 ## Usage
@@ -43,14 +42,14 @@ JWT_SECRET_KEY="SomeRandomSecretPhrase"
   - For Linux environment
 
 ```bash
-$ export FLASK_APP=app.py
-$ export FLASK_ENV=development
-$ flask run --host=0.0.0.0
+export FLASK_APP=app.py
+export FLASK_ENV=development
+flask run --host=0.0.0.0
 ```
   - For Windows environment
 
 ```bash
-$ set FLASK_APP=app.py
-$ set FLASK_ENV=development
-$ flask run --host=0.0.0.0
+set FLASK_APP=app.py
+set FLASK_ENV=development
+flask run --host=0.0.0.0
 ```
