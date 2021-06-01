@@ -22,3 +22,5 @@ app.register_blueprint(authentication, url_prefix="/api/auth")
 from Blueprints.blueprint_dashboard import dashboard
 app.register_blueprint(dashboard, url_prefix="/api/")
 
+if __name__ == '__main__':
+	app.run()

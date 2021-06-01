@@ -9,7 +9,6 @@ dashboard = Blueprint("dashboard", __name__)
 
 @dashboard.route("/profil", methods=["POST"])
 def get_profile():
-	print(request.json)
 	user_id = request.json["user_id"]
 
 	user_profile = db_read("""SELECT * FROM profil WHERE id = %s""", (user_id,))
