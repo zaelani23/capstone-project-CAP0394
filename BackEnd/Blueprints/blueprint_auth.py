@@ -32,7 +32,7 @@ def register_user():
             insert_id = query1["insert_id"]
             query2 = db_write(
                 """INSERT INTO profil (id, email, nama, desa, kecamatan, kabupaten, provinsi) VALUES (%s, %s, %s, '', '', '', '')""",
-                (insert_id, user_email, user_nama),
+                (insert_id, user_email, user_nama.title()),
             )
 
         if query1["status"] and ["status"]:

@@ -26,12 +26,12 @@ def get_profile():
 @dashboard.route("/edit-profil", methods=["POST"])
 def edit_profil():
 	user_id = request.json["user_id"]
-	user_nama = request.json["nama"]
+	user_nama = request.json["nama"].title()
 	user_email = request.json["email"]
-	user_desa = request.json["desa"]
-	user_kecamatan = request.json["kecamatan"]
-	user_kabupaten = request.json["kabupaten"]
-	user_provinsi = request.json["provinsi"]
+	user_desa = request.json["desa"].title()
+	user_kecamatan = request.json["kecamatan"].title()
+	user_kabupaten = request.json["kabupaten"].title()
+	user_provinsi = request.json["provinsi"].title()
 
 	update1 = db_update("""UPDATE profil SET email = %s, nama = %s, desa = %s, kecamatan = %s, kabupaten = %s, provinsi = %s WHERE profil.id = %s""",
                 (user_email, user_nama, user_desa, user_kecamatan, user_kabupaten, user_provinsi, user_id),
