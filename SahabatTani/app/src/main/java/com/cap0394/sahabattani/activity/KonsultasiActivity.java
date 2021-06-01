@@ -12,5 +12,9 @@ public class KonsultasiActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_konsultasi);
+
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setTitle("Konsultasi");
+        }
     }
 }

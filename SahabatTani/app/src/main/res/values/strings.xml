@@ -12,8 +12,8 @@
     <string name="title_activity_dashboard">DashboardActivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_name">Mohamad Zaelani</string>
-    <string name="nav_header_email">m3322969@bangkit.academy</string>
+    <string name="nav_header_name">Loading...</string>
+    <string name="nav_header_email">Loading...</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_logout">Logout</string>
 

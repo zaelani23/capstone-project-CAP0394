@@ -56,7 +56,7 @@ public class RegisterActivity extends AppCompatActivity {
                     Toast.makeText(RegisterActivity.this,"Complete all fields", Toast.LENGTH_LONG).show();
                 }else{
                     // Proses register
-                    // register();
+                    register();
                 }
             }
         });
